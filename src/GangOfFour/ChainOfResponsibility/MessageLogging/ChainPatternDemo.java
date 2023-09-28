@@ -24,15 +24,12 @@ public class ChainPatternDemo {
 
         errorLogger.setNextLogger(DatabaseLogger);
         DatabaseLogger.setNextLogger(consoleLogger);
-        
-       
 
         return DatabaseLogger;
     }
 
     public static void main(String[] args) {
         AbstractLogger loggerChain = getChainOfLoggers();
-        
 
         loggerChain.logMessage(AbstractLogger.INFO,
                 "This is an information.");
@@ -45,5 +42,20 @@ public class ChainPatternDemo {
 
         loggerChain.logMessage(AbstractLogger.WARNING,
                 "This is a warning information.");
+
+        AbstractLogger loggerChain2 = getChainOfLoggers2();
+        
+        loggerChain2.logMessageOnce(AbstractLogger.INFO,
+                "This is an information.");
+
+        loggerChain2.logMessage(AbstractLogger.DEBUG,
+                "This is an debug level information.");
+
+        loggerChain2.logMessage(AbstractLogger.ERROR,
+                "This is an error information.");
+
+        loggerChain2.logMessage(AbstractLogger.WARNING,
+                "This is a warning information.");
+
     }
 }

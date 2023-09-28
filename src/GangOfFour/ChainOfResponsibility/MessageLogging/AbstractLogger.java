@@ -9,7 +9,6 @@ public abstract class AbstractLogger {
 
     protected int level;
 
-    //next element in chain or responsibility
     protected AbstractLogger nextLogger;
 
     public void setNextLogger(AbstractLogger nextLogger) {
@@ -22,6 +21,18 @@ public abstract class AbstractLogger {
         }
         if (nextLogger != null) {
             nextLogger.logMessage(level, message);
+        }
+    }
+
+    public void logMessageOnce(int level, String message) {
+        if (this.level == level) {
+            write(message);
+        }
+        else if (nextLogger != null) {
+            nextLogger.logMessageOnce(level, message);
+        }
+        else{
+            System.out.println("Current Chain has no support for "+level);
         }
     }
 
