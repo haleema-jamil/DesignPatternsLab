@@ -1,4 +1,4 @@
-package GangOfFour.Moderator.ChatRoom;
+package GangOfFour.Mediator.ChatRoom;
 
 public class MediatorPatternDemo {
 

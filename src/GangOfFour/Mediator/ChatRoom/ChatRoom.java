@@ -1,4 +1,4 @@
-package GangOfFour.Moderator.ChatRoom;
+package GangOfFour.Mediator.ChatRoom;
 
 import java.util.Date;
 
