@@ -3,10 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Iterator/Repository/Container.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Iterator/Repository/Student.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Iterator/Repository/IteratorPatternDemo.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Iterator/Repository/Iterator.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/Student.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/ComputerListIterator.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/OddEvenComputerAllocation.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/ComputerList.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/ComputerAllocationTemplate.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/Computer.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/AllocatedComputers.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/ComputerIterator.java</file>
+            <file>file:/Z:/DesignPatterns/src/LabMid/Demo.java</file>
         </group>
     </open-files>
 </project-private>

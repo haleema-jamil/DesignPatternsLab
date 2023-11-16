@@ -1,19 +1,18 @@
 package GangOfFour.Visitor.ComputerParts;
 
 public class Computer implements ComputerPart {
-	
-   ComputerPart[] parts;
 
-   public Computer(){
-      parts = new ComputerPart[] {new Mouse(), new Keyboard(), new Monitor()};		
-   } 
+    ComputerPart[] parts;
 
+    public Computer() {
+        parts = new ComputerPart[]{new Mouse(), new Keyboard(), new Monitor(), new Multimedia()};
+    }
 
-   @Override
-   public void accept(ComputerPartVisitor computerPartVisitor) {
-      for (int i = 0; i < parts.length; i++) {
-         parts[i].accept(computerPartVisitor);
-      }
-      computerPartVisitor.visit(this);
-   }
+    @Override
+    public void accept(ComputerPartVisitor computerPartVisitor) {
+        for (int i = 0; i < parts.length; i++) {
+            parts[i].accept(computerPartVisitor);
+        }
+        computerPartVisitor.visit(this);
+    }
 }
