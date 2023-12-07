@@ -1,6 +1,6 @@
 package GangOfFour.State.MediaPlayer;
 
-public class LockedState extends State {
+class LockedState extends State {
 
     LockedState(Player player) {
         super(player);

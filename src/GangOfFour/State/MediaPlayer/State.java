@@ -1,12 +1,8 @@
 package GangOfFour.State.MediaPlayer;
 
-public abstract class State {
+abstract class State {
     Player player;
 
-    /**
-     * Context passes itself through the state constructor. This may help a
-     * state to fetch some useful context data if needed.
-     */
     State(Player player) {
         this.player = player;
     }

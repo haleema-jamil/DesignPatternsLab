@@ -1,6 +1,6 @@
 package GangOfFour.State.MediaPlayer;
 
-public class ReadyState extends State {
+class ReadyState extends State {
 
     public ReadyState(Player player) {
         super(player);

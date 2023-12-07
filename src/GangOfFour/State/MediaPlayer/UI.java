@@ -21,17 +21,22 @@ public class UI {
         context.add(textField);
         context.add(buttons);
 
-        // Context delegates handling user's input to a state object. Naturally,
-        // the outcome will depend on what state is currently active, since all
-        // states can handle the input differently.
         JButton play = new JButton("Play");
-        play.addActionListener(e -> textField.setText(player.getState().onPlay()));
+        play.addActionListener(e -> {
+            String action = player.getState().onPlay();
+            textField.setText(action);
+            if (player.isTrackDamaged()) {
+                textField.setText("Player is damaged. Reset the player.");
+            }
+        });
+
         JButton stop = new JButton("Stop");
         stop.addActionListener(e -> textField.setText(player.getState().onLock()));
         JButton next = new JButton("Next");
         next.addActionListener(e -> textField.setText(player.getState().onNext()));
         JButton prev = new JButton("Prev");
         prev.addActionListener(e -> textField.setText(player.getState().onPrevious()));
+
         frame.setVisible(true);
         frame.setSize(300, 100);
         buttons.add(play);
