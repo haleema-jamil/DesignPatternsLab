@@ -1,5 +1,5 @@
 package GangOfFour.Proxy.StudentTeacher;
 
-public interface Exam {
-    void conductExam();
+interface Exam {
+    void addAnswer(String question, String answer);
 }
