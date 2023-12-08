@@ -1,10 +1,14 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package GangOfFour.Facade.Shapes;
 
-public class Circle implements Shape {
+public class Triangle implements Shape {
 
    @Override
    public void draw(String... arguments) {
-      StringBuilder sb = new StringBuilder("Circle::draw(");
+      StringBuilder sb = new StringBuilder("Triangle::draw(");
       for (String arg : arguments) {
          sb.append(arg).append(", ");
       }
