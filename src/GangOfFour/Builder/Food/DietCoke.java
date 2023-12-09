@@ -1,10 +1,10 @@
 package GangOfFour.Builder.Food;
 
-public class DietCoke extends ColdDrink {   
+public class DietCoke extends ColdDrink implements DietDrink {
 
-    @Override
+   @Override
    public float price() {
-      return 30.0f + 5.0f;
+      return 25.0f; // Assuming a specific price for Diet Coke
    }
 
    @Override

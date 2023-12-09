@@ -3,50 +3,52 @@ package GangOfFour.Builder.Food;
 import java.util.Scanner;
 
 public class BuilderPatternDemo {
+   public static void main(String[] args) {
 
-    public static void main(String[] args) {
+      MealBuilder mealBuilder = new MealBuilder();
+      Scanner scanner = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
+      System.out.println("Select your meal options:");
+      System.out.println("1. Veg Meal");
+      System.out.println("2. Non-Veg Meal");
+      System.out.println("3. Diet Coke Meal");
+      System.out.println("4. Diet Pepsi Meal");
+      System.out.println("5. Tea Meal");
 
-        System.out.println("Select a beverage:");
-        System.out.println("1. Coke");
-        System.out.println("2. Diet Coke");
-        System.out.println("3. Pepsi");
-        System.out.println("4. Diet Pepsi");
-        System.out.println("5. Tea");
+      int choice = scanner.nextInt();
+      Meal meal = null;
 
-        int choice = scanner.nextInt();
+      switch (choice) {
+         case 1:
+            meal = mealBuilder.prepareVegMeal();
+            break;
+         case 2:
+            meal = mealBuilder.prepareNonVegMeal();
+            break;
+         case 3:
+            meal = mealBuilder.prepareDietCokeMeal();
+            break;
+         case 4:
+            meal = mealBuilder.prepareDietPepsiMeal();
+            break;
+         case 5:
+            System.out.println("Enter sweetness type (e.g., Low, Medium, High): ");
+            String sweetnessType = scanner.next();
+            System.out.println("Add cream? (true/false): ");
+            boolean hasCream = scanner.nextBoolean();
+            System.out.println("Enter sweetness spoons count: ");
+            int sweetnessSpoons = scanner.nextInt();
+            meal = mealBuilder.prepareTeaMeal(sweetnessType, hasCream, sweetnessSpoons);
+            break;
+         default:
+            System.out.println("Invalid choice");
+            return;
+      }
 
-        ColdDrink drink;
-        HotDrink hdrink;
-        if (choice == 1) {
-            drink = new Coke();
-        } else if (choice == 2) {
-            drink = new DietCoke();
-        } else if (choice == 3) {
-            drink = new Pepsi();
-        } else if (choice == 4) {
-            drink = new DietPepsi();
-        } else if (choice == 5) {
-            hdrink = new Tea();
-            System.out.println("Add cream (yes/no):");
-            String addCream = scanner.next();
+      System.out.println("Your selected meal:");
+      meal.showItems();
+      System.out.println("Total Cost: " + meal.getCost());
 
-            System.out.println("Enter the number of spoons of sweetness:");
-            int spoons = scanner.nextInt();
-
-        }
-
-        MealBuilder mealBuilder = new MealBuilder();
-
-        Meal vegMeal = mealBuilder.prepareVegMeal();
-        System.out.println("Veg Meal");
-        vegMeal.showItems();
-        System.out.println("Total Cost: " + vegMeal.getCost());
-
-        Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
-        System.out.println("\n\nNon-Veg Meal");
-        nonVegMeal.showItems();
-        System.out.println("Total Cost: " + nonVegMeal.getCost());
-    }
+      scanner.close();
+   }
 }

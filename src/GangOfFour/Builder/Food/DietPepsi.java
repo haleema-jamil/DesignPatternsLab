@@ -1,10 +1,14 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package GangOfFour.Builder.Food;
 
-public class DietPepsi extends ColdDrink {   
+public class DietPepsi extends ColdDrink implements DietDrink {
 
-    @Override
+   @Override
    public float price() {
-      return 35.0f + 5.0f;
+      return 30.0f; // Assuming a specific price for Diet Pepsi
    }
 
    @Override
