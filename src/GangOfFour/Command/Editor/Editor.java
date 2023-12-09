@@ -11,7 +11,7 @@ public class Editor {
     public JTextArea textField;
     public String clipboard;
     private CommandHistory history = new CommandHistory();
-    private Stack<Command> redoStack = new Stack<>();  // Add this line
+    private Stack<Command> redoStack = new Stack<>();
 
     public void init() {
         JFrame frame = new JFrame("Text editor (type & use buttons, Luke!)");
@@ -27,6 +27,7 @@ public class Editor {
         JButton ctrlX = new JButton("Ctrl+X");
         JButton ctrlV = new JButton("Ctrl+V");
         JButton ctrlZ = new JButton("Ctrl+Z");
+        JButton ctrlshiftz = new JButton("Ctrl+Shift+z");
         Editor editor = this;
         ctrlC.addActionListener(new ActionListener() {
             @Override
@@ -52,10 +53,17 @@ public class Editor {
                 undo();
             }
         });
+        ctrlshiftz.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                redo();
+            }
+        });
         buttons.add(ctrlC);
         buttons.add(ctrlX);
         buttons.add(ctrlV);
         buttons.add(ctrlZ);
+        buttons.add(ctrlshiftz);
         content.add(buttons);
         frame.setSize(450, 200);
         frame.setLocationRelativeTo(null);
@@ -76,7 +84,7 @@ public class Editor {
         Command command = history.pop();
         if (command != null) {
             command.undo();
-            redoStack.push(command); // Move undone command to redo stack
+            redoStack.push(command);
         }
     }
 
