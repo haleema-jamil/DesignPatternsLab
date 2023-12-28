@@ -1,0 +1,4 @@
+Strategy Pattern is used for checking eligibility checking
+Factiry Method is used for Desciplines option
+Observer pattern is used for Communication among all concrete observers
+Mediator is used to communicate between observers
