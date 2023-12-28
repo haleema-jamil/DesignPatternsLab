@@ -2,24 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/NewClass.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/Images/RealImage.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/ExamResults.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/Images/VirtualProxyImageLoader.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/ExamLoader.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/Images/Image.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/ProtectedProxyExamResultsForTeacher.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Template/SocialNetwork/Twitter.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/Images/NullImage.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/Exam.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/MathExam.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Template/SocialNetwork/Network.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/Images/SmartProxyImageWithFakeDisplay.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Template/SocialNetwork/Facebook.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/Images/ProxyPatternDemo.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/RealExamLoader.java</file>
-            <file>file:/Z:/DesignPatterns/src/GangOfFour/Proxy/StudentTeacher/ProtectedProxyExamResults.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
